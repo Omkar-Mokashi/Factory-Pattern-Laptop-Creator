@@ -8,7 +8,17 @@ namespace Factory_Pattern_Laptop_Creator
     {
         public ILaptop GetLaptop(string laptopName)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(laptopName))
+                return null;
+            else if (laptopName.ToUpper().Equals("ASUS"))
+                return new AsusLaptop();
+            else if (laptopName.ToUpper().Equals("HP"))
+                return new HPLaptop();
+            else if (laptopName.ToUpper().Equals("DELL"))
+                return new DELLLaptop();
+            else if (laptopName.ToUpper().Equals("MSI"))
+                return new MSILaptop();
+            return null;
         }
     }
 }
