@@ -6,6 +6,7 @@ namespace Factory_Pattern_Laptop_Creator
 {
     public class LaptopFactory
     {
+        //The laptop factory function that creates and provides the different laptop objects.
         public ILaptop GetLaptop(string laptopName)
         {
             if (string.IsNullOrEmpty(laptopName))
