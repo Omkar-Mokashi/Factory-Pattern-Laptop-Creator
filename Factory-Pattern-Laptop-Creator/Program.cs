@@ -6,6 +6,7 @@ namespace Factory_Pattern_Laptop_Creator
     {
         static void Main(string[] args)
         {
+            //Calling the laptop factory and getting the different laptops.
             LaptopFactory laptopFactory = new LaptopFactory();
 
             ILaptop laptop1 = laptopFactory.GetLaptop("ASUS");
